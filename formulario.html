@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body { background-color: #e3f2fd; font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #0d47a1; }
+        a { color: #1565c0; }
+        fieldset { border: 2px solid #1565c0; background-color: white; }
+        legend { color: #1565c0; font-weight: bold; }
+        input[type="submit"] { background-color: #1565c0; color: white; border: none; padding: 6px 14px; }
+        input[type="reset"] { background-color: #90caf9; color: #0d47a1; border: none; padding: 6px 14px; }
+    </style>
+</head>
+<body>
+
+    <h1> Formulario </h1>
+    <fieldset>
+        <legend>Datos personales</legend>
+        <form method="post" action="proceso.php">
+            Escribe tu nombre:<br>
+            <input type="text" name="nombre" id="nombre" maxlength="40" required>
+            <br>
+            Escribe tu apellido:<br>
+            <input type="text" name="apellido" id="apellido" maxlength="40" required>
+            <br>
+            Escribe tu edad:<br>
+            <input type="number" name="edad" id="edad">
+            <br>
+            Correo electronico:<br>
+            <input type="email" name="correo" id="correo" required>
+            <br>
+            Nivel de ingles:<br>
+            <select name="nivel">
+                <option>Basico</option>
+                <option>Intermedio</option>
+                <option>Avanzado</option>
+            </select>
+            <br>
+            ¿Te gusta el ingles?<br>
+            <input type="radio" name="gusta" value="Si"> Si
+            <input type="radio" name="gusta" value="No"> No
+            <br><br>
+            Temas que quieres practicar:<br>
+            <input type="checkbox" name="temas[]" value="Gramatica"> Gramatica
+            <input type="checkbox" name="temas[]" value="Vocabulario"> Vocabulario
+            <input type="checkbox" name="temas[]" value="Pronunciacion"> Pronunciacion
+            <br><br>
+            Selecciona tu color favorito:<br>
+            <input type="color" name="color" value="#1565c0">
+            <br><br>
+            Comentarios:<br>
+            <textarea name="comentarios" rows="3" cols="40"></textarea>
+            <br><br>
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar">
+        </form>
+    </fieldset>
+    <br>
+    <a href="index.html">Volver al inicio</a>
+
+</body>
+</html>
